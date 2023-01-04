@@ -1,21 +1,3 @@
-# Variables
-
-
-$s=New-Object -ComObject SAPI.SpVoice
-# Intro ---------------------------------------------------------------------------------------------------
-
-    $fullName = Net User $Env:username | Select-String -Pattern "Full Name";$fullName = ("$fullName").TrimStart("Full Name")
-
-    }
- 
- # If no name is detected function will return $env:UserName 
-
-    # Write Error is just for troubleshooting 
-    catch {Write-Error "No name was detected" 
-    return $env:UserName
-    -ErrorAction SilentlyContinue
-    }
-
-    return $fullName 
-
-}
+  $fullName = Net User $Env:username | Select-String -Pattern "Full Name";$fullName = ("$fullName").TrimStart("Full Name")
+  
+  return $fullname
