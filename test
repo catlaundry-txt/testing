@@ -26,7 +26,6 @@ $s=New-Object -ComObject SAPI.SpVoice
 $fullName = Get-fullName
 
 # echo statement used to track progress while debugging
-echo "Intro Done"
 
 ###########################################################################################################
 
@@ -58,7 +57,6 @@ function Get-PubIP {
 }
 
 # echo statement used to track progress while debugging
-echo "Pub IP Done"
 
 ###########################################################################################################
 
